@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cunfc732kmjo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebitj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_28emr"]
+size = Vector2(50, 50)
+orientation = 1
+
+[node name="Tutorial_part1" type="Node3D" unique_id=1569425870]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=2011510790]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=922442044]
+shape = SubResource("BoxShape3D_ebitj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1446294663]
+mesh = SubResource("QuadMesh_28emr")
