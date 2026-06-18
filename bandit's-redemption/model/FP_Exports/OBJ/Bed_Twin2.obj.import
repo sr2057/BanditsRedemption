@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d4i2c5ob75jhp"
+path="res://.godot/imported/Bed_Twin2.obj-d6f13a233f8e404efbde8667fc5762c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bed_Twin2.obj-d6f13a233f8e404efbde8667fc5762c7.mesh"]
+
+source_file="res://model/FP_Exports/OBJ/Bed_Twin2.obj"
+dest_files=["res://.godot/imported/Bed_Twin2.obj-d6f13a233f8e404efbde8667fc5762c7.mesh", "res://.godot/imported/Bed_Twin2.obj-d6f13a233f8e404efbde8667fc5762c7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

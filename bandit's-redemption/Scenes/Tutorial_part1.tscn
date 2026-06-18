@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://m7iba3hp6h15" path="res://model/Stylized Nature MegaKit[Standard]/glTF/Bark_NormalTree_Normal.png" id="1_8fbkw"]
 [ext_resource type="PackedScene" uid="uid://c0tsvuvj6ssvo" path="res://Objects/player.tscn" id="2_h22d2"]
-[ext_resource type="PackedScene" uid="uid://b3x5kehuy0qfi" path="res://model/Exports/glTF/Dummy.gltf" id="3_h22d2"]
+[ext_resource type="PackedScene" uid="uid://b3x5kehuy0qfi" path="res://model/FP_Exports/glTF/Dummy.gltf" id="3_h22d2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebitj"]
 size = Vector3(50, 1, 50)
