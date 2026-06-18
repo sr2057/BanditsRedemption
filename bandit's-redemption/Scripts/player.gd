@@ -7,7 +7,7 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var sensitivity = 0.003
-@onready var camera = $camera3D
+@onready var camera = $Camera3D
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://cunfc732kmjo"]
 
+[ext_resource type="Texture2D" uid="uid://m7iba3hp6h15" path="res://model/Stylized Nature MegaKit[Standard]/glTF/Bark_NormalTree_Normal.png" id="1_8fbkw"]
+[ext_resource type="PackedScene" uid="uid://c0tsvuvj6ssvo" path="res://Objects/player.tscn" id="2_h22d2"]
+[ext_resource type="PackedScene" uid="uid://b3x5kehuy0qfi" path="res://model/Exports/glTF/Dummy.gltf" id="3_h22d2"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebitj"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40bcn"]
+albedo_texture = ExtResource("1_8fbkw")
 
 [sub_resource type="QuadMesh" id="QuadMesh_28emr"]
 size = Vector2(50, 50)
@@ -8,10 +16,21 @@ orientation = 1
 
 [node name="Tutorial_part1" type="Node3D" unique_id=1569425870]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=603078997]
+transform = Transform3D(1, 0, 0, 0, 0.063069254, 0.99800915, 0, -0.99800915, 0.063069254, 0, 24.192524, 0)
+
 [node name="Floor" type="StaticBody3D" parent="." unique_id=2011510790]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=922442044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_ebitj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1446294663]
+material_override = SubResource("StandardMaterial3D_40bcn")
 mesh = SubResource("QuadMesh_28emr")
+
+[node name="Player" parent="." unique_id=347124077 instance=ExtResource("2_h22d2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2013764, 0)
+
+[node name="Dummy2" parent="." unique_id=360056314 instance=ExtResource("3_h22d2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74390364, 0.0023748875, -6.9462385)
