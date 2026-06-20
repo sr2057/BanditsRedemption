@@ -1,3 +1,151 @@
 [gd_scene format=3 uid="uid://c85y45h30tttx"]
 
+[ext_resource type="PackedScene" uid="uid://cebhba77k48dh" path="res://model/Stylized Nature MegaKit[Standard]/FBX/Rock_Medium_2.fbx" id="1_8i65c"]
+[ext_resource type="PackedScene" uid="uid://3jp01huqd82t" path="res://model/Stylized Nature MegaKit[Standard]/FBX/TwistedTree_2.fbx" id="2_m35rq"]
+[ext_resource type="PackedScene" uid="uid://bp1y1mqof7t5t" path="res://model/Stylized Nature MegaKit[Standard]/FBX/TwistedTree_1.fbx" id="3_sgy12"]
+[ext_resource type="PackedScene" uid="uid://dqh2vpgnxr3h6" path="res://model/Stylized Nature MegaKit[Standard]/FBX/CommonTree_5.fbx" id="4_5gw1s"]
+[ext_resource type="PackedScene" uid="uid://ih5h6ynb5ouj" path="res://model/Stylized Nature MegaKit[Standard]/FBX/CommonTree_2.fbx" id="5_brn58"]
+[ext_resource type="PackedScene" uid="uid://c8ataom1iptt3" path="res://model/Stylized Nature MegaKit[Standard]/FBX/CommonTree_4.fbx" id="6_fx2vl"]
+[ext_resource type="PackedScene" uid="uid://dbng8h01555o6" path="res://model/Stylized Nature MegaKit[Standard]/glTF/CommonTree_3.gltf" id="7_mqud2"]
+[ext_resource type="PackedScene" uid="uid://dek22etvw12cv" path="res://model/Stylized Nature MegaKit[Standard]/glTF/Rock_Medium_1.gltf" id="8_sswaw"]
+[ext_resource type="PackedScene" uid="uid://cdfdwve0pk1ip" path="res://model/Stylized Nature MegaKit[Standard]/glTF/Rock_Medium_2.gltf" id="9_kpk71"]
+[ext_resource type="PackedScene" uid="uid://brgp3tp4xduj5" path="res://model/Stylized Nature MegaKit[Standard]/glTF/Rock_Medium_3.gltf" id="10_8nvbb"]
+[ext_resource type="PackedScene" uid="uid://cp0orddyiwtki" path="res://model/Stylized Nature MegaKit[Standard]/glTF/CommonTree_2.gltf" id="11_kpk71"]
+[ext_resource type="PackedScene" uid="uid://c0tsvuvj6ssvo" path="res://Objects/characters/player.tscn" id="11_orlbv"]
+[ext_resource type="PackedScene" uid="uid://blov1ho1aobe2" path="res://model/Stylized Nature MegaKit[Standard]/glTF/CommonTree_5.gltf" id="12_8nvbb"]
+[ext_resource type="PackedScene" uid="uid://b1l857y6t4xnc" path="res://model/Stylized Nature MegaKit[Standard]/FBX/CommonTree_3.fbx" id="12_m35rq"]
+[ext_resource type="PackedScene" uid="uid://cke5e0ivac3pw" path="res://model/Stylized Nature MegaKit[Standard]/glTF/CommonTree_4.gltf" id="14_orlbv"]
+[ext_resource type="PackedScene" uid="uid://t0634ovtvuoy" path="res://model/Stylized Nature MegaKit[Standard]/glTF/TwistedTree_4.gltf" id="15_m8quk"]
+[ext_resource type="PackedScene" uid="uid://doi8l8vb7bfgn" path="res://model/Stylized Nature MegaKit[Standard]/glTF/TwistedTree_5.gltf" id="16_qae3o"]
+[ext_resource type="PackedScene" uid="uid://birapxly6yejd" path="res://model/Stylized Nature MegaKit[Standard]/FBX/Clover_2.fbx" id="17_jyml5"]
+[ext_resource type="PackedScene" uid="uid://by2rekjphpj40" path="res://model/Stylized Nature MegaKit[Standard]/FBX/Flower_3_Group.fbx" id="18_8brlw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8quk"]
+size = Vector3(50, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qae3o"]
+albedo_color = Color(0, 0.42745098, 0.24705882, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_jyml5"]
+size = Vector2(50, 20)
+orientation = 1
+
 [node name="Intro" type="Node3D" unique_id=821951110]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=361865214]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1369106380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_m8quk")
+debug_color = Color(6.160736e-06, 0.5932336, 0.73920655, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1937918091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06587291, 0, 0)
+material_override = SubResource("StandardMaterial3D_qae3o")
+mesh = SubResource("QuadMesh_jyml5")
+
+[node name="Rock_Medium_2" parent="Floor" unique_id=1932363964 instance=ExtResource("1_8i65c")]
+transform = Transform3D(0.81984603, 0, -1.8242402, 0, 2, 0, 1.8242402, 0, 0.81984603, 808.65656, 0.13008265, 3.575366)
+
+[node name="TwistedTree_2" parent="Floor" unique_id=1592246293 instance=ExtResource("2_m35rq")]
+transform = Transform3D(-0.246499, 0, -0.0416922, 0, 0.25, 0, 0.0416922, 0, -0.246499, -23.068958, 0.02593708, -5.3071494)
+
+[node name="TwistedTree_1" parent="Floor" unique_id=544988556 instance=ExtResource("3_sgy12")]
+transform = Transform3D(0.2490037, 0, -0.16732353, 0, 0.3, 0, 0.16732353, 0, 0.2490037, -22.114237, 0.15607247, 7.1200047)
+
+[node name="CommonTree_5" parent="Floor" unique_id=632375407 instance=ExtResource("4_5gw1s")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -22.678556, 0.24277225, 4.816171)
+
+[node name="CommonTree_2" parent="Floor" unique_id=1959848995 instance=ExtResource("5_brn58")]
+transform = Transform3D(0.4702282, 0, 0.64721364, 0, 0.8, 0, -0.64721364, 0, 0.4702282, -19.860544, 0.2780577, -4.5268188)
+
+[node name="CommonTree_32" parent="Floor" unique_id=1447568152 instance=ExtResource("7_mqud2")]
+transform = Transform3D(0.877, 0, 0, 0, 0.877, 0, 0, 0, 0.877, -24.435648, 0.23345104, -5.8380337)
+
+[node name="CommonTree_33" parent="Floor" unique_id=1436238581 instance=ExtResource("7_mqud2")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -24.259535, 0.0011837333, 5.5271044)
+
+[node name="Rock_Medium_12" parent="Floor" unique_id=467058856 instance=ExtResource("8_sswaw")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -21.988201, 0.079819486, -4.9682794)
+
+[node name="Rock_Medium_22" parent="Floor" unique_id=883857466 instance=ExtResource("9_kpk71")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -21.82723, 0.062213674, 3.8764362)
+
+[node name="Rock_Medium_32" parent="Floor" unique_id=1668982029 instance=ExtResource("10_8nvbb")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -23.743183, -0.01426971, 4.6031275)
+
+[node name="CommonTree_3" parent="Floor" unique_id=502654631 instance=ExtResource("5_brn58")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -23.162994, 0.2427722, 6.1529264)
+
+[node name="CommonTree_6" parent="Floor" unique_id=1653398796 instance=ExtResource("4_5gw1s")]
+transform = Transform3D(0.1252558, 0, -0.89124125, 0, 0.9, 0, 0.89124125, 0, 0.1252558, -20.71324, 0.24277225, -7.000618)
+
+[node name="CommonTree_7" parent="Floor" unique_id=646627704 instance=ExtResource("6_fx2vl")]
+transform = Transform3D(0.87, 0, 0, 0, 0.87, 0, 0, 0, 0.87, -23.709322, 0.25498927, -7.6142364)
+
+[node name="CommonTree_8" parent="Floor" unique_id=1851000518 instance=ExtResource("5_brn58")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, -24.152857, 0.24277222, 7.8806853)
+
+[node name="CommonTree_9" parent="Floor" unique_id=1689201104 instance=ExtResource("4_5gw1s")]
+transform = Transform3D(0.2630227, 0, -0.5392765, 0, 0.6, 0, 0.5392765, 0, 0.2630227, -20.899033, 0.24277225, 5.149214)
+
+[node name="CommonTree_10" parent="Floor" unique_id=1458539855 instance=ExtResource("6_fx2vl")]
+transform = Transform3D(-0.39439842, 0, 0.06670752, 0, 0.4, 0, -0.06670752, 0, -0.39439842, -19.46965, 0.24277213, -5.896419)
+
+[node name="CommonTree_34" parent="Floor" unique_id=1168267630 instance=ExtResource("7_mqud2")]
+transform = Transform3D(-0.3803565, 0, -0.815677, 0, 0.9, 0, 0.815677, 0, -0.3803565, -19.721472, 0.24277201, 3.6860986)
+
+[node name="CommonTree_22" parent="Floor" unique_id=245635996 instance=ExtResource("11_kpk71")]
+transform = Transform3D(0.2599575, 0, -0.6499401, 0, 0.7, 0, 0.6499401, 0, 0.2599575, -18.382118, 0.24277154, 2.3870513)
+
+[node name="CommonTree_23" parent="Floor" unique_id=1995841415 instance=ExtResource("11_kpk71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.221786, 0.24277201, 3.1352153)
+
+[node name="CommonTree_52" parent="Floor" unique_id=2138344654 instance=ExtResource("12_8nvbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.661554, 0.24277177, 2.712361)
+
+[node name="CommonTree_4" parent="Floor" unique_id=1887225158 instance=ExtResource("12_m35rq")]
+transform = Transform3D(0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, 0.76604444, -22.322628, 0.24277224, 8.744625)
+
+[node name="CommonTree_53" parent="Floor" unique_id=1732459794 instance=ExtResource("12_8nvbb")]
+transform = Transform3D(0.20014329, 0, -0.8466656, 0, 0.87, 0, 0.8466656, 0, 0.20014329, -18.210217, 0.24277201, -3.5316262)
+
+[node name="CommonTree_42" parent="Floor" unique_id=738178673 instance=ExtResource("14_orlbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.832193, 0.24277201, -3.5302522)
+
+[node name="TwistedTree_42" parent="Floor" unique_id=1930062255 instance=ExtResource("15_m8quk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.392883, 0.20147468, -5.7972264)
+
+[node name="TwistedTree_52" parent="Floor" unique_id=867953996 instance=ExtResource("16_qae3o")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -17.962753, 0.0409794, 5.4280767)
+
+[node name="CommonTree_11" parent="Floor" unique_id=1703565410 instance=ExtResource("12_m35rq")]
+transform = Transform3D(0.79946274, 0, 0.029314965, 0, 0.8, 0, -0.029314965, 0, 0.79946274, -14.115447, 0.24277224, -3.3779497)
+
+[node name="Clover_2" parent="Floor" unique_id=1258807176 instance=ExtResource("17_jyml5")]
+transform = Transform3D(0.70000005, 0, 2.9802322e-08, 0, 0.70000005, 0, -2.9802322e-08, 0, 0.70000005, -16.924328, 0.0023508072, -3.5110106)
+
+[node name="Clover_3" parent="Floor" unique_id=1407990518 instance=ExtResource("17_jyml5")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -18.69386, 0.0023508065, 1.2935935)
+
+[node name="Flower_3_Group" parent="Floor" unique_id=423752644 instance=ExtResource("18_8brlw")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, -19.133465, 0.03458416, -3.3922844)
+
+[node name="Player" parent="." unique_id=347124077 instance=ExtResource("11_orlbv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.29857, 0.94341433, -0.55627847)
+
+[node name="Floor2" type="StaticBody3D" parent="." unique_id=670477399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9710512, 20.95385)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2" unique_id=1188738106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_m8quk")
+debug_color = Color(6.160736e-06, 0.5932336, 0.73920655, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2" unique_id=752042870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06587291, 0, 0)
+material_override = SubResource("StandardMaterial3D_qae3o")
+mesh = SubResource("QuadMesh_jyml5")
+
+[node name="Rock_Medium_2" parent="Floor2" unique_id=1770434390 instance=ExtResource("1_8i65c")]
+transform = Transform3D(0.81984603, 0, -1.8242402, 0, 2, 0, 1.8242402, 0, 0.81984603, -6.3019414, 0.13008265, 3.575366)

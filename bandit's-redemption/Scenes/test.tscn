@@ -19,28 +19,6 @@ orientation = 1
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=603078997]
 transform = Transform3D(1, 0, 0, 0, 0.063069254, 0.99800915, 0, -0.99800915, 0.063069254, 0, 24.192524, 0)
 
-[node name="Floor3" type="StaticBody3D" parent="." unique_id=111489958]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.63791, 4.183449, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor3" unique_id=2126376037]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_ebitj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor3" unique_id=1443581332]
-material_override = SubResource("StandardMaterial3D_40bcn")
-mesh = SubResource("QuadMesh_28emr")
-
-[node name="Floor2" type="StaticBody3D" parent="." unique_id=394527637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.721333, 3.970375, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2" unique_id=959892969]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_ebitj")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2" unique_id=1657514292]
-material_override = SubResource("StandardMaterial3D_40bcn")
-mesh = SubResource("QuadMesh_28emr")
-
 [node name="Floor" type="StaticBody3D" parent="." unique_id=2011510790]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=922442044]
