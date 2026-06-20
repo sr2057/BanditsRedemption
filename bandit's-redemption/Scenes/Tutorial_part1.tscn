@@ -32,5 +32,5 @@ mesh = SubResource("QuadMesh_28emr")
 [node name="Player" parent="." unique_id=347124077 instance=ExtResource("2_h22d2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2013764, 0)
 
-[node name="Dummy2" parent="." unique_id=360056314 instance=ExtResource("3_h22d2")]
+[node name="Dummy" parent="." unique_id=360056314 instance=ExtResource("3_h22d2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74390364, 0.0023748875, -6.9462385)

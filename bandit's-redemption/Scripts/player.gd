@@ -7,9 +7,10 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var sensitivity = 0.003
-@onready var camera = $Camera3D
+@onready var camera = $FirstPerson
 
 func _ready():
+	$FirstPerson.current = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event):
@@ -18,7 +19,17 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(70))
 
+func _switch_view():
+	if Input.is_action_just_pressed("Switch Camera"):
+		if camera == $FirstPerson:
+			camera = $Head
+			$Head/ThirdPerson.current = true
+		else:
+			camera = $FirstPerson
+			$FirstPerson.current = true
+
 func _process(delta):
+	_switch_view()
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
 
