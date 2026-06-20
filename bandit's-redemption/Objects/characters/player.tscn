@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c0tsvuvj6ssvo"]
+
+[ext_resource type="Script" uid="uid://dli3uwcuhousq" path="res://Scripts/player.gd" id="1_y0qk3"]
+[ext_resource type="PackedScene" uid="uid://di8768lpn7ykb" path="res://Objects/characters/mainChar.tscn" id="2_3y5cq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y0qk3"]
+radius = 0.203125
+height = 1.8299316
+
+[node name="Player" type="CharacterBody3D" unique_id=347124077]
+script = ExtResource("1_y0qk3")
+
+[node name="Superhero_Male_FullBody" parent="." unique_id=408495768 instance=ExtResource("2_3y5cq")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.010867596, -0.94287336, 0.057851315)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=683093950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0100342035, 0.075962186)
+shape = SubResource("CapsuleShape3D_y0qk3")
+
+[node name="Head" type="Node3D" parent="." unique_id=794173674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5998554, -0.23015833)
+
+[node name="ThirdPerson" type="Camera3D" parent="Head" unique_id=471271301]
+transform = Transform3D(1, 0, 0, 0, 0.9256462, 0.37839016, 0, -0.37839016, 0.9256462, 0, 0.75408363, 1.3356652)
+
+[node name="FirstPerson" type="Camera3D" parent="." unique_id=728057794]
+transform = Transform3D(1, 0, 0, 0, 0.99455833, 0.104181305, 0, -0.104181305, 0.99455833, 0, 0.7521697, -0.13912547)

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://doba4mklrskps"
+path="res://.godot/imported/Table_Fork.obj-80f373d6a0ff4c1b04cecae5d2d6e4ff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Table_Fork.obj-80f373d6a0ff4c1b04cecae5d2d6e4ff.mesh"]
+
+source_file="res://model/Fantasy Props Megakit/FP_Exports/OBJ/Table_Fork.obj"
+dest_files=["res://.godot/imported/Table_Fork.obj-80f373d6a0ff4c1b04cecae5d2d6e4ff.mesh", "res://.godot/imported/Table_Fork.obj-80f373d6a0ff4c1b04cecae5d2d6e4ff.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

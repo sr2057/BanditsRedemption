@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://eeasc1fdc435"
+path="res://.godot/imported/BookGroup_Small_1.obj-bee5d3ad5d208355b5b519176bf67c5e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BookGroup_Small_1.obj-bee5d3ad5d208355b5b519176bf67c5e.mesh"]
+
+source_file="res://model/Fantasy Props Megakit/FP_Exports/OBJ/BookGroup_Small_1.obj"
+dest_files=["res://.godot/imported/BookGroup_Small_1.obj-bee5d3ad5d208355b5b519176bf67c5e.mesh", "res://.godot/imported/BookGroup_Small_1.obj-bee5d3ad5d208355b5b519176bf67c5e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -2,6 +2,7 @@ Bandit's Redemption
 -------------------
 Tasks:
 + make basic ui (sofia)
+	- main menu (from scene)
 	- settings button
 	- minimap
 	- inventory

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dn1yaf1auaufn"
+path="res://.godot/imported/Chalice.obj-73073c3e633c4365a1e3c97f3f2793bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Chalice.obj-73073c3e633c4365a1e3c97f3f2793bd.mesh"]
+
+source_file="res://model/Fantasy Props Megakit/FP_Exports/OBJ/Chalice.obj"
+dest_files=["res://.godot/imported/Chalice.obj-73073c3e633c4365a1e3c97f3f2793bd.mesh", "res://.godot/imported/Chalice.obj-73073c3e633c4365a1e3c97f3f2793bd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
